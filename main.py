@@ -80,14 +80,6 @@ def create():
         return "Для действий на сайте выполните вход!"
 
 
-@app.route('/Community')
-def Community():
-    if unlock:
-        all_users = User.query.order_by(User.id).all()
-        return render_template('Community.html', users=all_users)
-    else:
-        return "Для действий на сайте выполните вход!"
-
 
 @app.route('/index')
 def index():
